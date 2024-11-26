@@ -63,6 +63,7 @@
             checkPromo = new CheckBox();
             checkEventos = new CheckBox();
             btnCadastrar = new Button();
+            btnCad = new Button();
             SuspendLayout();
             // 
             // cnpjText
@@ -405,11 +406,23 @@
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click_1;
             // 
+            // btnCad
+            // 
+            btnCad.Location = new Point(423, 435);
+            btnCad.Name = "btnCad";
+            btnCad.Size = new Size(127, 42);
+            btnCad.TabIndex = 35;
+            btnCad.Text = "visualizar cadastros";
+            btnCad.UseVisualStyleBackColor = true;
+            btnCad.Click += btnCad_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(566, 489);
+            Controls.Add(btnCad);
             Controls.Add(btnCadastrar);
             Controls.Add(checkEventos);
             Controls.Add(checkPromo);
@@ -447,6 +460,7 @@
             Controls.Add(cnpjText);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -488,5 +502,6 @@
         private CheckBox checkPromo;
         private CheckBox checkEventos;
         private Button btnCadastrar;
+        private Button btnCad;
     }
 }

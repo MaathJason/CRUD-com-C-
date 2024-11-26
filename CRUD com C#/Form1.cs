@@ -15,7 +15,7 @@ namespace CRUD_com_C_
                 if (!txtCnpj.Text.Equals("") && !txtComplemento.Text.Equals("") && !txtCep.Text.Equals("") &&
                     !txtBairro.Text.Equals("") && !txtCidade.Text.Equals("") && !txtEnd.Text.Equals("") &&
                     !txtInscricao.Text.Equals("") && !txtNumero.Text.Equals("") && !txtResp.Text.Equals("") &&
-                    !txtTelefone.Text.Equals("")&& boxCnae.SelectedItem != null && boxUf.SelectedItem != null)
+                    !txtTelefone.Text.Equals("") && boxCnae.SelectedItem != null && boxUf.SelectedItem != null)
                 {
                     cadastroFuncionarios cadEmpresa = new cadastroFuncionarios();
                     cadEmpresa.Cnpj = txtCnpj.Text;
@@ -73,6 +73,20 @@ namespace CRUD_com_C_
             {
                 MessageBox.Show("Erro ao cadastrar: " + ex.Message);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCad_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+
+            form2.Show();
+
+           
         }
     }
 }
