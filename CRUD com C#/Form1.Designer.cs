@@ -48,8 +48,8 @@
             label7 = new Label();
             label8 = new Label();
             boxUf = new ComboBox();
-            matriz = new RadioButton();
-            filial = new RadioButton();
+            matrizR = new RadioButton();
+            filialR = new RadioButton();
             txtTelefone = new TextBox();
             label9 = new Label();
             txtResp = new TextBox();
@@ -62,7 +62,7 @@
             checkGarantia = new CheckBox();
             checkPromo = new CheckBox();
             checkEventos = new CheckBox();
-            button1 = new Button();
+            btnCadastrar = new Button();
             SuspendLayout();
             // 
             // cnpjText
@@ -126,7 +126,8 @@
             boxCnae.Location = new Point(457, 45);
             boxCnae.Name = "boxCnae";
             boxCnae.Size = new Size(93, 23);
-            boxCnae.TabIndex = 6;            // 
+            boxCnae.TabIndex = 6;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -136,7 +137,6 @@
             label2.Size = new Size(53, 21);
             label2.TabIndex = 7;
             label2.Text = "CNAE";
-            label2.Click += label2_Click;
             // 
             // txtNumero
             // 
@@ -247,29 +247,29 @@
             boxUf.Size = new Size(93, 23);
             boxUf.TabIndex = 18;
             // 
-            // matriz
+            // matrizR
             // 
-            matriz.AutoSize = true;
-            matriz.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            matriz.Location = new Point(22, 282);
-            matriz.Name = "matriz";
-            matriz.Size = new Size(61, 19);
-            matriz.TabIndex = 20;
-            matriz.TabStop = true;
-            matriz.Text = "Matriz";
-            matriz.UseVisualStyleBackColor = true;
+            matrizR.AutoSize = true;
+            matrizR.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            matrizR.Location = new Point(22, 282);
+            matrizR.Name = "matrizR";
+            matrizR.Size = new Size(61, 19);
+            matrizR.TabIndex = 20;
+            matrizR.TabStop = true;
+            matrizR.Text = "Matriz";
+            matrizR.UseVisualStyleBackColor = true;
             // 
-            // filial
+            // filialR
             // 
-            filial.AutoSize = true;
-            filial.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            filial.Location = new Point(104, 282);
-            filial.Name = "filial";
-            filial.Size = new Size(49, 19);
-            filial.TabIndex = 21;
-            filial.TabStop = true;
-            filial.Text = "Filial";
-            filial.UseVisualStyleBackColor = true;
+            filialR.AutoSize = true;
+            filialR.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            filialR.Location = new Point(104, 282);
+            filialR.Name = "filialR";
+            filialR.Size = new Size(49, 19);
+            filialR.TabIndex = 21;
+            filialR.TabStop = true;
+            filialR.Text = "Filial";
+            filialR.UseVisualStyleBackColor = true;
             // 
             // txtTelefone
             // 
@@ -288,7 +288,6 @@
             label9.Size = new Size(76, 21);
             label9.TabIndex = 22;
             label9.Text = "Telefone";
-            label9.Click += label9_Click;
             // 
             // txtResp
             // 
@@ -396,21 +395,22 @@
             checkEventos.Text = "Eventos";
             checkEventos.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCadastrar
             // 
-            button1.Location = new Point(214, 435);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 42);
-            button1.TabIndex = 34;
-            button1.Text = "Enviar";
-            button1.UseVisualStyleBackColor = true;
+            btnCadastrar.Location = new Point(214, 435);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(127, 42);
+            btnCadastrar.TabIndex = 34;
+            btnCadastrar.Text = "Enviar";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(566, 489);
-            Controls.Add(button1);
+            Controls.Add(btnCadastrar);
             Controls.Add(checkEventos);
             Controls.Add(checkPromo);
             Controls.Add(checkGarantia);
@@ -423,8 +423,8 @@
             Controls.Add(label10);
             Controls.Add(txtTelefone);
             Controls.Add(label9);
-            Controls.Add(filial);
-            Controls.Add(matriz);
+            Controls.Add(filialR);
+            Controls.Add(matrizR);
             Controls.Add(label8);
             Controls.Add(boxUf);
             Controls.Add(txtCep);
@@ -447,7 +447,6 @@
             Controls.Add(cnpjText);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -474,8 +473,8 @@
         private Label label7;
         private Label label8;
         private ComboBox boxUf;
-        private RadioButton matriz;
-        private RadioButton filial;
+        private RadioButton matrizR;
+        private RadioButton filialR;
         private TextBox txtTelefone;
         private Label label9;
         private TextBox txtResp;
@@ -488,6 +487,6 @@
         private CheckBox checkGarantia;
         private CheckBox checkPromo;
         private CheckBox checkEventos;
-        private Button button1;
+        private Button btnCadastrar;
     }
 }
